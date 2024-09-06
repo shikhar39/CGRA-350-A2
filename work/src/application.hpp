@@ -49,6 +49,7 @@ private:
 
 	// geometry
 	basic_model m_model;
+	skeleton_model m_skelModel;
 
 public:
 	// setup

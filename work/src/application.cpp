@@ -15,7 +15,7 @@
 #include "cgra/cgra_image.hpp"
 #include "cgra/cgra_shader.hpp"
 #include "cgra/cgra_wavefront.hpp"
-
+#include "skeleton.hpp"
 
 using namespace std;
 using namespace cgra;
@@ -44,6 +44,10 @@ Application::Application(GLFWwindow *window) : m_window(window) {
 	m_model.shader = shader;
 	m_model.mesh = load_wavefront_data(CGRA_SRCDIR + std::string("/res//assets//teapot.obj")).build();
 	m_model.color = vec3(1, 0, 0);
+
+	m_skelModel.skel = skeleton_data(CGRA_SRCDIR + std::string("//res//assets//testskeleton1.asf"));
+
+
 }
 
 
